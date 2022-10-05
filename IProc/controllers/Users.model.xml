@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataModel baseSchema="dbo" baseTable="Users" alias="Users" created="2022-10-04T16:45:47" modified="2022-10-04T20:11:40" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+<dataModel baseSchema="dbo" baseTable="Users" alias="Users" created="2022-10-04T16:45:47" modified="2022-10-05T14:48:15" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
   <foreignKeys>
     <foreignKey id="PTJ" parentTableSchema="dbo" parentTableName="Ptj" x="483" y="20">
       <foreignKeyColumn columnName="PTJ_CODE" parentColumnName="PTJ_CODE" />
@@ -9,6 +9,7 @@
     <column name="UserID" fieldName="UserID" label="User ID" />
     <column name="USER_NRIC" fieldName="UserNric" label="User Nric" />
     <column name="UserName" fieldName="UserName" label="User Name" />
+    <column name="FullNAME" fieldName="FullName" label="Full Name" />
     <column name="Email" fieldName="Email" label="Email" />
     <column name="USER_POSITION" fieldName="UserPosition" label="User Position" />
     <column name="USER_GRADE" fieldName="UserGrade" label="User Grade" />
@@ -32,6 +33,5 @@
     <column name="FailedPasswordAttemptWindowStart" fieldName="FailedPasswordAttemptWindowStart" label="Failed Password Attempt Window Start" format="g" />
     <column name="FailedPasswordAnswerAttemptCount" fieldName="FailedPasswordAnswerAttemptCount" label="Failed Password Answer Attempt Count" />
     <column name="FailedPasswordAnswerAttemptWindowStart" fieldName="FailedPasswordAnswerAttemptWindowStart" label="Failed Password Answer Attempt Window Start" format="g" />
-    <column name="FullNAME" fieldName="FullName" label="Full Name" />
   </columns>
 </dataModel>
