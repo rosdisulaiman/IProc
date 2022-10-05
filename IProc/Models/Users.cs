@@ -15,6 +15,8 @@ namespace IProc.Models
 
         UserName,
 
+        FullName,
+
         Email,
 
         UserPosition,
@@ -61,8 +63,6 @@ namespace IProc.Models
 
         FailedPasswordAnswerAttemptWindowStart,
 
-        FullName,
-
         Roles,
 
         ConfirmPassword,
@@ -81,6 +81,9 @@ namespace IProc.Models
 
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private string _userName;
+
+        [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
+        private string _fullName;
 
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private string _email;
@@ -152,9 +155,6 @@ namespace IProc.Models
         private DateTime? _failedPasswordAnswerAttemptWindowStart;
 
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
-        private string _fullName;
-
-        [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
         private string _roles;
 
         [System.Diagnostics.DebuggerBrowsable(System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -208,6 +208,19 @@ namespace IProc.Models
             {
                 _userName = value;
                 UpdateFieldValue("UserName", value);
+            }
+        }
+
+        public string FullName
+        {
+            get
+            {
+                return _fullName;
+            }
+            set
+            {
+                _fullName = value;
+                UpdateFieldValue("FullName", value);
             }
         }
 
@@ -507,19 +520,6 @@ namespace IProc.Models
             {
                 _failedPasswordAnswerAttemptWindowStart = value;
                 UpdateFieldValue("FailedPasswordAnswerAttemptWindowStart", value);
-            }
-        }
-
-        public string FullName
-        {
-            get
-            {
-                return _fullName;
-            }
-            set
-            {
-                _fullName = value;
-                UpdateFieldValue("FullName", value);
             }
         }
 

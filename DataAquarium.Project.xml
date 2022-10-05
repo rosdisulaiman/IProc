@@ -7,9 +7,20 @@
   <providerName>System.Data.SqlClient</providerName>
   <namespace>IProc</namespace>
   <webServer run="true" port="33070" preview="Browser" client="">
-    <webConfig></webConfig>
+    <webConfig>InsertAfter: /configuration/connectionStrings
+  &lt;system.net&gt;
+    &lt;mailSettings&gt;
+      &lt;smtp deliveryMethod="Network" from="mrs.cudid@gmail.com"&gt;
+        &lt;network
+          host="localhost"
+          port="25"
+          defaultCredentials="true"
+        /&gt;
+      &lt;/smtp&gt;
+    &lt;/mailSettings&gt;
+  &lt;/system.net&gt;</webConfig>
   </webServer>
-  <features useSaveAndNew="true" pageHeader="IPROC" copyright="" annotations="false" annotationsPath="" newColumn="true" floating="false" maxGridFields="100" multiSelect="false" batchEdit="false" advancedSearch="false" advancedLookup="false" relationshipExplorer="false" enablePermalinks="false" enableHistory="false" enableTransactions="false" showModalForms="true" tabViewSelection="0">
+  <features useSaveAndNew="true" pageHeader="IPROC" copyright="CARA" annotations="false" annotationsPath="" newColumn="true" floating="false" maxGridFields="100" multiSelect="false" batchEdit="false" advancedSearch="false" advancedLookup="false" relationshipExplorer="true" enablePermalinks="false" enableHistory="false" enableTransactions="false" showModalForms="true" tabViewSelection="9">
     <navigation detectUnderscoreSeparatedSchema="" />
     <blob allowUploadOnInsert="true" />
     <framework scriptOnly="true" useExtenders="false" />
@@ -26,14 +37,14 @@
   <reports enabled="true" version="15" />
   <host path="" url="" />
   <databaseObjectFilter generate="ControllersAndPages"></databaseObjectFilter>
-  <bll normalizeModelNames="true" discoveryDepth="3" labelFormatExpression="" selectMethod="Select" selectSingleMethod="SelectSingle" insertMethod="Insert" updateMethod="Update" deleteMethod="Delete" generateSharedBusinessRules="false" includeViews="true" tabViewSelection="0">
+  <bll normalizeModelNames="true" discoveryDepth="3" labelFormatExpression="" selectMethod="Select" selectSingleMethod="SelectSingle" insertMethod="Insert" updateMethod="Update" deleteMethod="Delete" generateSharedBusinessRules="false" includeViews="true" tabViewSelection="1">
     <fieldMap></fieldMap>
     <keys></keys>
     <fieldsToIgnore></fieldsToIgnore>
     <fieldsToHide></fieldsToHide>
     <customLabels></customLabels>
   </bll>
-  <membership enabled="false" providerName="System.Data.SqlClient" connectionString="" windowsAuthentication="false" activeDirectory="false" customSecurity="true" dedicatedLogin="false" displayRememberMe="true" rememberMeSet="false" displaySignUp="false" displayPasswordRecovery="false" displayMyAccount="true" displayHelp="true" idleUserDetectionTimeout="-1" tabViewSelection="0" validationKey="36088AFF97D9A0B315F050F726ECA5F71AA98C856BFD96D2CDDC5CFF8A7A3ACDCC6A43F32F2D2734952BC5C51E2B7D15A271050C22542BBE4D750BA64517228B">
+  <membership enabled="false" providerName="System.Data.SqlClient" connectionString="" windowsAuthentication="false" activeDirectory="false" customSecurity="true" dedicatedLogin="false" displayRememberMe="true" rememberMeSet="true" displaySignUp="false" displayPasswordRecovery="false" displayMyAccount="true" displayHelp="true" idleUserDetectionTimeout="5" tabViewSelection="3" validationKey="36088AFF97D9A0B315F050F726ECA5F71AA98C856BFD96D2CDDC5CFF8A7A3ACDCC6A43F32F2D2734952BC5C51E2B7D15A271050C22542BBE4D750BA64517228B">
     <adConfig></adConfig>
     <config>table Users = Users
 column [int|uiid] UserID = UserID
