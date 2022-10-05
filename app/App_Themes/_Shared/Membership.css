@@ -1,0 +1,270 @@
+﻿/* core membership styles */
+
+body, input, button, select, textarea
+{
+    font-family: tahoma;
+    font-size: 8.5pt;
+}
+
+body
+{
+    margin-top: 0px;
+}
+
+form
+{
+    margin: 0px;
+}
+
+.MembershipBarPlaceholder
+{
+    height: 22px;
+    border-bottom: solid 1px silver;
+    background-color: White;
+}
+
+div.MembershipBar
+{
+    font-family: Tahoma;
+    font-size: 8.5pt;
+    position: absolute;
+    height: 0px;
+    border-style: none;
+    top: 2px;
+    right: 10px;
+    background-color: transparent;
+}
+table.LoginDialog
+{
+    border: solid 1px silver;
+    float: right;
+    position: relative;
+    z-index: 100000;
+    margin-right: 4px;
+    background-color: #F5F5F5;
+    color: #000000;
+    margin-right: 0px;
+}
+
+table.LoginDialogCollapsed
+{
+    color: Black;
+    background-color: transparent;
+    border: 1px solid transparent;
+    height: 20px;
+    margin-top: 0px;
+    z-index: auto;
+}
+
+table.LoginDialog input#UserName, table.LoginDialog input#Password
+{
+    width: 90px;
+}
+
+table.LoginDialog td
+{
+    padding: 1px;
+}
+table.LoginDialog td#LoginControls
+{
+    padding: 2px 2px 2px 2px;
+}
+
+table.LoginDialog td#Anchor
+{
+    padding-left: 4px;
+    padding-top: 2px;
+}
+
+div.MembershipBar input, div.MembershipBar button
+{
+    font-family: tahoma;
+    font-size: 8.5pt;
+}
+
+div.MembershipBar a
+{
+    color: #336699;
+    text-decoration: none;
+}
+
+div.MembershipBar a:hover
+{
+    text-decoration: underline;
+}
+
+.MembershipManager table.ViewSelector
+{
+    visibility: hidden;
+}
+
+div.HelpBar
+{
+    width: 300px;
+    border: solid 1px gray;
+    padding: 4px;
+    background-color:#fff;
+}
+
+div.HelpBar div.Title
+{
+    background-image: url(SettingsGraphic.jpg);
+    font-weight: bold;
+    color: #000;
+    padding: 4px;
+    margin: -4px -4px 4px -4px;
+    border-bottom: solid 1px gray;
+    background-position: -450px 0px;
+}
+
+div.HelpBar iframe
+{
+    width: 300px;
+    height: 400px;
+    overflow: auto;
+}
+
+div.HelpBar div.Buttons
+{
+    margin: 4px -4px -4px -4px;
+    border-top: solid 1px silver;
+    padding: 4px;
+}
+
+div.HelpBar div.Buttons button
+{
+    margin-right: 4px;
+}
+
+div.HelpLink
+{
+    position: relative;
+    top: 4px;
+    background-color: transparent;
+}
+
+div.CultureLink
+{
+    top: 3px;
+    position: relative;
+    background-color: transparent;
+    padding-top: 1px;
+    padding-right: 4px;
+    padding-left:3px;
+    color:#696969;
+}
+
+.CultureSelector_Arrow
+{
+    background-image: none;
+    background-color: transparent;
+}
+
+.CultureSelector_TopLine, .CultureSelector_RightLine, .CultureSelector_BottomLine, .CultureSelector_LeftLine
+{
+    background-color: transparent;
+}
+
+div.FixedDialog.UserIdle div.Text
+{
+    padding-bottom: 8px;
+    background-image: url(Information.gif);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+div.FixedDialog.UserIdle div.Buttons
+{
+    text-align: center;
+}
+
+div.BookmarkBar
+{
+    float: left;
+    margin-top: -2px;
+    font-family: Tahoma;
+    font-size: 8.5pt;
+    padding: 0px 10px;
+    color: #696969;
+}
+
+div.BookmarkBar a
+{
+    color: #336699;
+    text-decoration: none;
+}
+
+div.BookmarkBar a:hover
+{
+    text-decoration: underline;
+}
+
+div.BookmarkBar table.Frame
+{
+    border-collapse: collapse;
+}
+
+div.BookmarkBar table.Frame tr td
+{
+    padding: 3px 2px;
+    height: 22px;
+}
+
+div.BookmarkBar div.BookmarkControls
+{
+    position: relative;
+    display: inline;
+    padding-top: 4px;
+}
+
+div.BookmarkBar input
+{
+    width: 350px;
+    height: 12px;
+    padding: 1px 2px;
+    font-size: 7pt;
+    border: solid 1px gray;
+    color: gray;
+    margin-left: 4px;
+}
+
+div.BookmarkBar a.AddBookmark
+{
+    font-size: 1px;
+    display: block;
+    height: 15px;
+    width: 16px;
+    background-image: url(AddBookmark.gif);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+div.BookmarkBar a.CancelBookmark
+{
+    font-size: 1px;
+    display: block;
+    height: 15px;
+    width: 16px;
+    background-image: url(Undo.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+div.BookmarkBar a.AddBookmark:hover, div.BookmarkBar a.CancelBookmark:hover
+{
+    text-decoration: none;
+}
+
+a.RotateHistory
+{
+    text-decoration: none;
+}
+
+div.RotateHistory
+{
+    background-image: url(Search.png);
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}

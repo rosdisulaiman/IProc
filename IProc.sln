@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 17
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "app", "app\app.csproj", "{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IProc", "IProc\IProc.csproj", "{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}"
+EndProject
+
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code On Time Items", "Code On Time Items", "{801A7FBC-2616-4AD9-99F1-A48ABA67F19F}"
+	ProjectSection(SolutionItems) = preProject
+		ClientLibrary.en-US.txt = ClientLibrary.en-US.txt
+		DataAquarium.Project.xml = DataAquarium.Project.xml
+		DataAquarium.Version.xml = DataAquarium.Version.xml
+		Sync.LAPTOP-DRM6RIES-rosdi.xml = Sync.LAPTOP-DRM6RIES-rosdi.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

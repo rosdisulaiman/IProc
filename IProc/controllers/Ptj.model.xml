@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Ptj" alias="Ptj" created="2022-10-04T17:17:46" modified="2022-10-04T17:17:51" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="PTJ_CODE" fieldName="PtjCode" label="Ptj Code" />
+    <column name="PTJ_NAME" fieldName="PtjName" label="Ptj Name" />
+    <column name="PTJ_ADDRESS" fieldName="PtjAddress" label="Ptj Address" />
+    <column name="PTJ_PHONE" fieldName="PtjPhone" label="Ptj Phone" />
+    <column name="PTJ_STATUS" fieldName="PtjStatus" label="Ptj Status" />
+    <column name="PTJ_DATE" fieldName="PtjDate" label="Ptj Date" />
+    <column name="PTJ_PREFIX" fieldName="PtjPrefix" label="Ptj Prefix" />
+  </columns>
+</dataModel>

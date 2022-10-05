@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Modules" alias="Modules" created="2022-10-04T16:46:39" modified="2022-10-04T16:46:41" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="Module_Code" fieldName="ModuleCode" label="Module Code" />
+    <column name="Module_Name" fieldName="ModuleName" label="Module Name" />
+    <column name="Module_Prefix" fieldName="ModulePrefix" label="Module Prefix" />
+    <column name="Module_Status" fieldName="ModuleStatus" label="Module Status" />
+    <column name="Module_Date" fieldName="ModuleDate" label="Module Date" format="g" />
+  </columns>
+</dataModel>

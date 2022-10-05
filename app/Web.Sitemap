@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
+    <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/pages/home" cssClass="Wide" />
+    <siteMapNode title="Users" description="View Users" url="~/pages/users">
+      <siteMapNode title="Roles" description="View Roles" url="~/pages/roles" />
+      <siteMapNode title="User Pictures" description="View User Pictures" url="~/pages/user-pictures" />
+    </siteMapNode>
+    <siteMapNode title="Modules" description="View Modules" url="~/pages/modules" roles="Administrators" />
+    <siteMapNode title="Ptj" description="View Ptj" url="~/pages/ptj" />
+    <siteMapNode title="Site Content" description="View Site Content" url="~/pages/site-content" roles="Administrators, Content Editors, Developers" />
+  </siteMapNode>
+</siteMap>

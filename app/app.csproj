@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2E0856E-759C-45B4-A1A1-120F86FBA3E8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApp</RootNamespace>
+    <AssemblyName>WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\bin\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\bin\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>.\bin\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IProc\IProc.csproj">
+      <Project>{5ECB2791-A92A-4C3A-BEAD-32FFFE506C44}</Project>
+      <Name>IProc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="controls\TableOfContents.html" />
+    <Content Include="controls\TableOfContents.html.en-US.txt" />
+    <Content Include="controls\Welcome.html" />
+    <Content Include="controls\Welcome.html.en-US.txt" />
+    <Content Include="css\daf\touch-charts.css" />
+    <Content Include="css\daf\touch-charts.min.css" />
+    <Content Include="css\daf\touch-core.css" />
+    <Content Include="css\daf\touch-core.min.css" />
+    <Content Include="css\daf\touch-propgrid.css" />
+    <Content Include="css\daf\touch-propgrid.min.css" />
+    <Content Include="css\daf\touch-theme.css" />
+    <Content Include="css\daf\touch.css" />
+    <Content Include="css\daf\touch.min.css" />
+    <Content Include="css\sys\bootstrap.css" />
+    <Content Include="css\sys\bootstrap.min.css" />
+    <Content Include="css\sys\jquery.mobile-1.4.6.css" />
+    <Content Include="css\sys\jquery.mobile-1.4.6.min.css" />
+    <Content Include="css\themes\touch-accent.aquarium.json" />
+    <Content Include="css\themes\touch-accent.azure.json" />
+    <Content Include="css\themes\touch-accent.belltown.json" />
+    <Content Include="css\themes\touch-accent.berry.json" />
+    <Content Include="css\themes\touch-accent.bittersweet.json" />
+    <Content Include="css\themes\touch-accent.cay.json" />
+    <Content Include="css\themes\touch-accent.citrus.json" />
+    <Content Include="css\themes\touch-accent.classic.json" />
+    <Content Include="css\themes\touch-accent.construct.json" />
+    <Content Include="css\themes\touch-accent.convention.json" />
+    <Content Include="css\themes\touch-accent.darkknight.json" />
+    <Content Include="css\themes\touch-accent.felt.json" />
+    <Content Include="css\themes\touch-accent.graham.json" />
+    <Content Include="css\themes\touch-accent.granite.json" />
+    <Content Include="css\themes\touch-accent.grapello.json" />
+    <Content Include="css\themes\touch-accent.gravity.json" />
+    <Content Include="css\themes\touch-accent.lacquer.json" />
+    <Content Include="css\themes\touch-accent.laminate.json" />
+    <Content Include="css\themes\touch-accent.lichen.json" />
+    <Content Include="css\themes\touch-accent.mission.json" />
+    <Content Include="css\themes\touch-accent.modern.json" />
+    <Content Include="css\themes\touch-accent.modernrose.json" />
+    <Content Include="css\themes\touch-accent.municipal.json" />
+    <Content Include="css\themes\touch-accent.petal.json" />
+    <Content Include="css\themes\touch-accent.pinnate.json" />
+    <Content Include="css\themes\touch-accent.plastic.json" />
+    <Content Include="css\themes\touch-accent.ricasso.json" />
+    <Content Include="css\themes\touch-accent.simple.json" />
+    <Content Include="css\themes\touch-accent.social.json" />
+    <Content Include="css\themes\touch-accent.summer.json" />
+    <Content Include="css\themes\touch-accent.vantage.json" />
+    <Content Include="css\themes\touch-accent.verdant.json" />
+    <Content Include="css\themes\touch-accent.viewpoint.json" />
+    <Content Include="css\themes\touch-accent.whitesmoke.json" />
+    <Content Include="css\themes\touch-accent.yoshi.json" />
+    <Content Include="css\themes\touch-theme.dark.json" />
+    <Content Include="css\themes\touch-theme.light.json" />
+    <Content Include="css\_ignore.txt" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\MaterialIcons-Outlined.woff2" />
+    <Content Include="fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="fonts\MaterialIcons-Rounded.woff2" />
+    <Content Include="fonts\MaterialIcons-Sharp.woff2" />
+    <Content Include="images\acc-man-bkg.jpg" />
+    <Content Include="js\daf\classic.js" />
+    <Content Include="js\daf\daf-ifttt.js" />
+    <Content Include="js\daf\daf-import.js" />
+    <Content Include="js\daf\daf-import.min.js" />
+    <Content Include="js\daf\daf-membership.js" />
+    <Content Include="js\daf\daf-menu.js" />
+    <Content Include="js\daf\daf-odp.js" />
+    <Content Include="js\daf\daf-otpauth.js" />
+    <Content Include="js\daf\daf-otpauth.min.js" />
+    <Content Include="js\daf\daf-resources.en-US.js" />
+    <Content Include="js\daf\daf-search.js" />
+    <Content Include="js\daf\daf-search.min.js" />
+    <Content Include="js\daf\daf.js" />
+    <Content Include="js\daf\input-blob.js" />
+    <Content Include="js\daf\input-draw.js" />
+    <Content Include="js\daf\input-draw.min.js" />
+    <Content Include="js\daf\input-qrcode.js" />
+    <Content Include="js\daf\input-qrcode.min.js" />
+    <Content Include="js\daf\touch-charts.js" />
+    <Content Include="js\daf\touch-core.js" />
+    <Content Include="js\daf\touch-edit.js" />
+    <Content Include="js\daf\touch-edit.min.js" />
+    <Content Include="js\daf\touch-flow.js" />
+    <Content Include="js\daf\touch-flow.min.js" />
+    <Content Include="js\daf\touch-input.js" />
+    <Content Include="js\daf\touch-input.min.js" />
+    <Content Include="js\daf\touch-propgrid.js" />
+    <Content Include="js\daf\touch-propgrid.min.js" />
+    <Content Include="js\daf\touch.js" />
+    <Content Include="js\lib\codemirror.min.css" />
+    <Content Include="js\lib\codemirror.min.js" />
+    <Content Include="js\lib\import.min.js" />
+    <Content Include="js\lib\qrcode.min.js" />
+    <Content Include="js\surveys\cms\api\api-wizard.js" />
+    <Content Include="js\surveys\cms\api\api-wizard.rules.js" />
+    <Content Include="js\surveys\cms\oauth\oauth-wizard.js" />
+    <Content Include="js\surveys\cms\oauth\oauth-wizard.rules.js" />
+    <Content Include="js\surveys\cms\rules\rule-wizard.js" />
+    <Content Include="js\surveys\cms\rules\rule-wizard.rules.js" />
+    <Content Include="js\surveys\cms\new.js" />
+    <Content Include="js\surveys\cms\new.rules.js" />
+    <Content Include="js\sys\jquery-2.2.4.js" />
+    <Content Include="js\sys\jquery-3.6.0.js" />
+    <Content Include="js\sys\restful.js" />
+    <Content Include="js\sys\unicode.js" />
+    <Content Include="js\_ignore.txt" />
+    <Content Include="js\_references.js" />
+    <Content Include="pages\Home.html" />
+    <Content Include="pages\Home.html.en-US.txt" />
+    <Content Include="pages\Modules.html" />
+    <Content Include="pages\Ptj.html" />
+    <Content Include="pages\Roles.html" />
+    <Content Include="pages\SiteContent.html" />
+    <Content Include="pages\UserPictures.html" />
+    <Content Include="pages\UserRoles.html" />
+    <Content Include="pages\Users.html" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.aspx" />
+    <Content Include="Site.html" />
+    <Content Include="Site.html.en-US.txt" />
+    <Content Include="touch-settings.json" />
+    <Content Include="web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="Web.Sitemap.en-US.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Site.aspx.cs">
+      <DependentUpon>Site.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Aquarium\Aquarium.css" />
+    <Content Include="App_Themes\IProc\syst-ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="App_Themes\IProc\syst-ui-icons_222222_256x240.png" />
+    <Content Include="App_Themes\IProc\_Layout.skin" />
+    <Content Include="App_Themes\IProc\_Theme_Aquarium.css" />
+    <Content Include="App_Themes\_Shared\Acrobat.gif" />
+    <Content Include="App_Themes\_Shared\ActionBarBg.gif" />
+    <Content Include="App_Themes\_Shared\ActionBarDiv.gif" />
+    <Content Include="App_Themes\_Shared\ActionGroupBg.gif" />
+    <Content Include="App_Themes\_Shared\AddBookmark.gif" />
+    <Content Include="App_Themes\_Shared\AdvancedSearch.gif" />
+    <Content Include="App_Themes\_Shared\arrow-left.gif" />
+    <Content Include="App_Themes\_Shared\arrow-right.gif" />
+    <Content Include="App_Themes\_Shared\ArrowBkg.gif" />
+    <Content Include="App_Themes\_Shared\Attach.gif" />
+    <Content Include="App_Themes\_Shared\Attention.gif" />
+    <Content Include="App_Themes\_Shared\BACK.gif" />
+    <Content Include="App_Themes\_Shared\Bullet.gif" />
+    <Content Include="App_Themes\_Shared\Calendar.gif" />
+    <Content Include="App_Themes\_Shared\CheckMark.gif" />
+    <Content Include="App_Themes\_Shared\CheckMark2.gif" />
+    <Content Include="App_Themes\_Shared\CheckMarkLarge.GIF" />
+    <Content Include="App_Themes\_Shared\Close.gif" />
+    <Content Include="App_Themes\_Shared\Core.css" />
+    <Content Include="App_Themes\_Shared\DataSheet.gif" />
+    <Content Include="App_Themes\_Shared\DefaultLogo.gif" />
+    <Content Include="App_Themes\_Shared\Delete.gif" />
+    <Content Include="App_Themes\_Shared\DropArrow.gif" />
+    <Content Include="App_Themes\_Shared\Edit.gif" />
+    <Content Include="App_Themes\_Shared\EditMode.gif" />
+    <Content Include="App_Themes\_Shared\Erase.gif" />
+    <Content Include="App_Themes\_Shared\Excel.gif" />
+    <Content Include="App_Themes\_Shared\EXCLAIM.gif" />
+    <Content Include="App_Themes\_Shared\ExportCsv.gif" />
+    <Content Include="App_Themes\_Shared\ExportRowset.gif" />
+    <Content Include="App_Themes\_Shared\ExportRss.gif" />
+    <Content Include="App_Themes\_Shared\Filter.gif" />
+    <Content Include="App_Themes\_Shared\FilterOff.gif" />
+    <Content Include="App_Themes\_Shared\FilterOffDisabled.gif" />
+    <Content Include="App_Themes\_Shared\FORWARD.gif" />
+    <Content Include="App_Themes\_Shared\HeaderBg.gif" />
+    <Content Include="App_Themes\_Shared\html-editor-buttons.png" />
+    <Content Include="App_Themes\_Shared\ICONGO.gif" />
+    <Content Include="App_Themes\_Shared\Import.png" />
+    <Content Include="App_Themes\_Shared\Import2.png" />
+    <Content Include="App_Themes\_Shared\Information.gif" />
+    <Content Include="App_Themes\_Shared\Maximize.gif" />
+    <Content Include="App_Themes\_Shared\Membership.css" />
+    <Content Include="App_Themes\_Shared\MenuBg.gif" />
+    <Content Include="App_Themes\_Shared\MenuBgLarge.gif" />
+    <Content Include="App_Themes\_Shared\Minimize.gif" />
+    <Content Include="App_Themes\_Shared\MultiPage.gif" />
+    <Content Include="App_Themes\_Shared\Navigate.gif" />
+    <Content Include="App_Themes\_Shared\NavShape.jpg" />
+    <Content Include="App_Themes\_Shared\NavStrip.gif" />
+    <Content Include="App_Themes\_Shared\New.gif" />
+    <Content Include="App_Themes\_Shared\NewLarge.gif" />
+    <Content Include="App_Themes\_Shared\ObjectRef.gif" />
+    <Content Include="App_Themes\_Shared\PageContentRightSide.gif" />
+    <Content Include="App_Themes\_Shared\PageHeader.gif" />
+    <Content Include="App_Themes\_Shared\Page_Announce.png" />
+    <Content Include="App_Themes\_Shared\Page_Categories.png" />
+    <Content Include="App_Themes\_Shared\Page_Comments.png" />
+    <Content Include="App_Themes\_Shared\Page_Contacts.png" />
+    <Content Include="App_Themes\_Shared\Page_Discussions.png" />
+    <Content Include="App_Themes\_Shared\Page_Events.png" />
+    <Content Include="App_Themes\_Shared\Page_Folders.png" />
+    <Content Include="App_Themes\_Shared\Page_Generic.png" />
+    <Content Include="App_Themes\_Shared\Page_Images.png" />
+    <Content Include="App_Themes\_Shared\Page_Meeting.png" />
+    <Content Include="App_Themes\_Shared\Page_Memos.png" />
+    <Content Include="App_Themes\_Shared\Page_Misc.png" />
+    <Content Include="App_Themes\_Shared\Page_Notes.png" />
+    <Content Include="App_Themes\_Shared\Page_Referenes.png" />
+    <Content Include="App_Themes\_Shared\Page_Settings.png" />
+    <Content Include="App_Themes\_Shared\Page_Solutions.png" />
+    <Content Include="App_Themes\_Shared\Page_Tasks.png" />
+    <Content Include="App_Themes\_Shared\Page_Users.png" />
+    <Content Include="App_Themes\_Shared\ParaHeaderBkg.gif" />
+    <Content Include="App_Themes\_Shared\Paste.png" />
+    <Content Include="App_Themes\_Shared\Placeholder.gif" />
+    <Content Include="App_Themes\_Shared\PopupArrow.gif" />
+    <Content Include="App_Themes\_Shared\Print.png" />
+    <Content Include="App_Themes\_Shared\QuickFind.gif" />
+    <Content Include="App_Themes\_Shared\Refresh.png" />
+    <Content Include="App_Themes\_Shared\Save.gif" />
+    <Content Include="App_Themes\_Shared\SaveLarge.gif" />
+    <Content Include="App_Themes\_Shared\Search.gif" />
+    <Content Include="App_Themes\_Shared\Search.png" />
+    <Content Include="App_Themes\_Shared\SearchPlusMinus.png" />
+    <Content Include="App_Themes\_Shared\SettingsGraphic.jpg" />
+    <Content Include="App_Themes\_Shared\SiteActionsActiveTab.gif" />
+    <Content Include="App_Themes\_Shared\SiteActionsInactiveTab.gif" />
+    <Content Include="App_Themes\_Shared\SortAZ.gif" />
+    <Content Include="App_Themes\_Shared\SortDown.gif" />
+    <Content Include="App_Themes\_Shared\SortUp.gif" />
+    <Content Include="App_Themes\_Shared\SortZA.gif" />
+    <Content Include="App_Themes\_Shared\StatusBar.png" />
+    <Content Include="App_Themes\_Shared\tab-active-left-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-left-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-right-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-right-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-active-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-active.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-active-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-active-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-active.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-hover-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-hover-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-hover.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-bottom.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-left-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-left-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-right-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-right-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-hover.gif" />
+    <Content Include="App_Themes\_Shared\tab-left-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-left-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-left.gif" />
+    <Content Include="App_Themes\_Shared\tab-line.gif" />
+    <Content Include="App_Themes\_Shared\tab-right-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-right-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab-right.gif" />
+    <Content Include="App_Themes\_Shared\tab-verticalleft.gif" />
+    <Content Include="App_Themes\_Shared\tab-verticalright.gif" />
+    <Content Include="App_Themes\_Shared\tab.gif" />
+    <Content Include="App_Themes\_Shared\TabsActiveTab.gif" />
+    <Content Include="App_Themes\_Shared\TabsBar.gif" />
+    <Content Include="App_Themes\_Shared\TabsInactiveTab.gif" />
+    <Content Include="App_Themes\_Shared\TabsSelectedTab.gif" />
+    <Content Include="App_Themes\_Shared\TaskBoxBkg.gif" />
+    <Content Include="App_Themes\_Shared\TaskBullet.gif" />
+    <Content Include="App_Themes\_Shared\TopShape.jpg" />
+    <Content Include="App_Themes\_Shared\TreeControls.png" />
+    <Content Include="App_Themes\_Shared\Undo.gif" />
+    <Content Include="App_Themes\_Shared\ViewNameBg.gif" />
+    <Content Include="App_Themes\_Shared\Wait.gif" />
+    <Content Include="App_Themes\_Shared\WhiteDropArrow.gif" />
+    <Content Include="App_Themes\_Shared\Word.gif" />
+    <Content Include="App_Themes\_Shared\_Layout.css" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Web.Sitemap" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51832/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+				To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  
+			-->
+</Project>

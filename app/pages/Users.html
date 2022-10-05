@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <meta name="description" content="This page allows users management.">
+  </head>
+  <body>
+    <div data-flow="row">
+      <div data-activator="Tab|Users">
+        <div id="view1" data-controller="Users" data-view="grid1" data-show-in-summary="true" data-show-modal-forms="true" data-search-by-first-letter="true"> </div>
+      </div>
+      <div data-activator="Tab|Roles">
+        <div id="view2" data-controller="Users" data-view="UsersInRole" data-filter-source="view3" data-filter-fields="RoleID" data-page-size="5" data-auto-hide="self" data-show-modal-forms="true"> </div>
+      </div>
+      <div data-activator="Tab|Roles">
+        <div id="view3" data-controller="Roles"> </div>
+      </div>
+      <div data-activator="Tab|User Picture">
+        <div id="view4" data-controller="UserPictures"> </div>
+      </div>
+    </div>
+  </body>
+</html>

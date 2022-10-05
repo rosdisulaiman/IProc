@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Users" alias="Users" created="2022-10-04T16:45:47" modified="2022-10-04T20:11:40" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="PTJ" parentTableSchema="dbo" parentTableName="Ptj" x="483" y="20">
+      <foreignKeyColumn columnName="PTJ_CODE" parentColumnName="PTJ_CODE" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="UserID" fieldName="UserID" label="User ID" />
+    <column name="USER_NRIC" fieldName="UserNric" label="User Nric" />
+    <column name="UserName" fieldName="UserName" label="User Name" />
+    <column name="Email" fieldName="Email" label="Email" />
+    <column name="USER_POSITION" fieldName="UserPosition" label="User Position" />
+    <column name="USER_GRADE" fieldName="UserGrade" label="User Grade" />
+    <column name="USER_PHONE" fieldName="UserPhone" label="User Phone" />
+    <column name="PTJ_CODE" fieldName="PtjCode" label="Ptj Code" aliasColumnName="PTJ_NAME" aliasForeignKey="PTJ" />
+    <column name="PTJ_NAME" fieldName="PtjName" label="Ptj Name" foreignKey="PTJ" />
+    <column name="USER_STATUS" fieldName="UserStatus" label="User Status" />
+    <column name="USER_DATE" fieldName="UserDate" label="User Date" />
+    <column name="Password" fieldName="Password" label="Password" />
+    <column name="Comment" fieldName="Comment" label="Comment" />
+    <column name="PasswordQuestion" fieldName="PasswordQuestion" label="Password Question" />
+    <column name="PasswordAnswer" fieldName="PasswordAnswer" label="Password Answer" />
+    <column name="IsApproved" fieldName="IsApproved" label="Is Approved" />
+    <column name="LastActivityDate" fieldName="LastActivityDate" label="Last Activity Date" format="g" />
+    <column name="LastLoginDate" fieldName="LastLoginDate" label="Last Login Date" format="g" />
+    <column name="LastPasswordChangedDate" fieldName="LastPasswordChangedDate" label="Last Password Changed Date" format="g" />
+    <column name="CreationDate" fieldName="CreationDate" label="Creation Date" format="g" />
+    <column name="IsLockedOut" fieldName="IsLockedOut" label="Is Locked Out" />
+    <column name="LastLockedOutDate" fieldName="LastLockedOutDate" label="Last Locked Out Date" format="g" />
+    <column name="FailedPasswordAttemptCount" fieldName="FailedPasswordAttemptCount" label="Failed Password Attempt Count" />
+    <column name="FailedPasswordAttemptWindowStart" fieldName="FailedPasswordAttemptWindowStart" label="Failed Password Attempt Window Start" format="g" />
+    <column name="FailedPasswordAnswerAttemptCount" fieldName="FailedPasswordAnswerAttemptCount" label="Failed Password Answer Attempt Count" />
+    <column name="FailedPasswordAnswerAttemptWindowStart" fieldName="FailedPasswordAnswerAttemptWindowStart" label="Failed Password Answer Attempt Window Start" format="g" />
+    <column name="FullNAME" fieldName="FullName" label="Full Name" />
+  </columns>
+</dataModel>
