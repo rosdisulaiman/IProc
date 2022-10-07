@@ -116,12 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Web\AquariumExtenderBase.cs" />
-    <Compile Include="Web\ChartHost.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Web\ControlHost.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Web\ChartHost.cs" />
+    <Compile Include="Web\ControlHost.cs" />
     <Compile Include="Web\ControllerDataSource.cs" />
     <Compile Include="Web\ControllerDataSourceDesign.cs" />
     <Compile Include="Web\DataViewExtender.cs" />
@@ -130,9 +126,7 @@
     <Compile Include="Web\MembershipBar.cs" />
     <Compile Include="Web\MembershipBarExtender.cs" />
     <Compile Include="Web\MenuExtender.cs" />
-    <Compile Include="Web\PageBase.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Web\PageBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Security\EventTracker.cs" />
@@ -173,6 +167,7 @@
     <EmbeddedResource Include="controllers\UserPictures.xml" />
     <EmbeddedResource Include="controllers\Users.model.xml" />
     <EmbeddedResource Include="controllers\Users.xml" />
+    <None Include="Iprocs.bak" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\Blob.cs" />
@@ -181,9 +176,7 @@
     <Compile Include="Handlers\Import.cs" />
     <Compile Include="Handlers\Report.cs" />
     <Compile Include="Handlers\Report.generated.cs" />
-    <Compile Include="Handlers\Site.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Handlers\Site.cs" />
     <Compile Include="Handlers\Theme.cs" />
   </ItemGroup>
   <ItemGroup>
