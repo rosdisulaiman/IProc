@@ -7,7 +7,6 @@ select
 	"Users"."UserID" "UserID"
 	,"Users"."USER_NRIC" "UserNric"
 	,"Users"."UserName" "UserName"
-	,"Users"."FullNAME" "FullName"
 	,"Users"."Email" "Email"
 	,"Users"."USER_POSITION" "UserPosition"
 	,"Users"."USER_GRADE" "UserGrade"
@@ -31,6 +30,7 @@ select
 	,"Users"."FailedPasswordAttemptWindowStart" "FailedPasswordAttemptWindowStart"
 	,"Users"."FailedPasswordAnswerAttemptCount" "FailedPasswordAnswerAttemptCount"
 	,"Users"."FailedPasswordAnswerAttemptWindowStart" "FailedPasswordAnswerAttemptWindowStart"
+	,"Users"."FullNAME" "FullName"
 from "dbo"."Users" "Users"
 	left join "dbo"."Ptj" "PTJ" on "Users"."PTJ_CODE" = "PTJ"."PTJ_CODE"
 ]]></text>
@@ -73,10 +73,9 @@ left join UserRoles on Users.UserID = UserRoles.UserID]]></text>
     <field name="UserID" type="Int32" allowNulls="false" isPrimaryKey="true" label="User ID" readOnly="true" />
     <field name="UserNric" type="String" label="User Nric" length="12" showInSummary="true" />
     <field name="UserName" type="String" allowNulls="false" label="User Name" length="128" showInSummary="true" />
-    <field name="FullName" type="String" label="Full Name" length="150" showInSummary="true" readOnly="true" />
     <field name="Email" type="String" label="Email" length="128" showInSummary="true" />
     <field name="UserPosition" type="String" label="User Position" length="150" showInSummary="true" />
-    <field name="UserGrade" type="String" label="User Grade" length="4" />
+    <field name="UserGrade" type="String" label="User Grade" length="4" showInSummary="true" />
     <field name="UserPhone" type="String" label="User Phone" length="12" />
     <field name="PtjCode" type="Int32" label="Ptj Code">
       <items style="Lookup" dataController="Ptj" newDataView="createForm1" dataValueField="PtjCode" dataTextField="PtjName" />
@@ -103,6 +102,7 @@ left join UserRoles on Users.UserID = UserRoles.UserID]]></text>
     <field name="FailedPasswordAttemptWindowStart" type="DateTime" allowNulls="false" dataFormatString="g" label="Failed Password Attempt Window Start" />
     <field name="FailedPasswordAnswerAttemptCount" type="Int32" allowNulls="false" label="Failed Password Answer Attempt Count" readOnly="true" />
     <field name="FailedPasswordAnswerAttemptWindowStart" type="DateTime" allowNulls="false" dataFormatString="g" label="Failed Password Answer Attempt Window Start" readOnly="true" />
+    <field name="FullName" type="String" label="Full Name" length="150" readOnly="true" />
     <field name="Roles" type="String" label="Roles" computed="true" length="255">
       <items style="CheckBoxList" dataController="Roles" dataValueField="RoleName" dataTextField="RoleName" />
     </field>
@@ -121,7 +121,7 @@ left join UserRoles on Users.UserID = UserRoles.UserID]]></text>
         <dataField fieldName="UserPosition" />
         <dataField fieldName="UserGrade" columns="4" />
         <dataField fieldName="UserPhone" columns="12" />
-        <dataField fieldName="PtjCode" aliasFieldName="PtjName" hyperlinkFormatString="~/pages/Ptj?PtjCode={PtjCode}&amp;_controller=Ptj&amp;_command=Select&amp;_argument=editForm1" />
+        <dataField fieldName="PtjCode" aliasFieldName="PtjName" />
         <dataField fieldName="UserStatus" columns="15" />
         <dataField fieldName="UserDate" columns="50" />
         <dataField fieldName="CreationDate" columns="20" />
@@ -153,7 +153,7 @@ Please select user roles that most closely match user's responsibilities. Roles 
             <dataField fieldName="UserPosition" />
             <dataField fieldName="UserGrade" columns="4" />
             <dataField fieldName="UserPhone" columns="12" />
-            <dataField fieldName="PtjCode" aliasFieldName="PtjName" hyperlinkFormatString="~/pages/Ptj?PtjCode={PtjCode}&amp;_controller=Ptj&amp;_command=Select&amp;_argument=editForm1" />
+            <dataField fieldName="PtjCode" aliasFieldName="PtjName" />
             <dataField fieldName="UserStatus" columns="15" />
             <dataField fieldName="UserDate" columns="50" />
             <dataField fieldName="Comment" rows="5" />
@@ -244,7 +244,7 @@ Please enter user name and password. Note that password must be at least 7 chara
         <dataField fieldName="UserPosition" />
         <dataField fieldName="UserGrade" columns="4" />
         <dataField fieldName="UserPhone" columns="12" />
-        <dataField fieldName="PtjCode" aliasFieldName="PtjName" hyperlinkFormatString="~/pages/Ptj?PtjCode={PtjCode}&amp;_controller=Ptj&amp;_command=Select&amp;_argument=editForm1" />
+        <dataField fieldName="PtjCode" aliasFieldName="PtjName" />
         <dataField fieldName="UserStatus" columns="15" />
         <dataField fieldName="UserDate" columns="50" />
         <dataField fieldName="CreationDate" columns="20" />
@@ -327,52 +327,5 @@ Please enter user name and password. Note that password must be at least 7 chara
     <rule id="r101" commandName="Insert" type="Code" phase="Before" />
     <rule id="r102" commandName="Update" type="Code" phase="Before" />
     <rule id="r103" commandName="Delete" type="Code" phase="Before" />
-    <rule id="r104" commandName="Insert" type="Email" phase="After"><![CDATA[Host: smtp.gmail.com
-Port: 587
-UserName: mrs.cudid@gmail.com
-Password: %Sayangdi4961%*
-EnableSSL: true
-
-From: "Sales Admin" <mrs.cudid@gmail.com>
-To: mr.cudid@gmail.com
-Subject: We have a new customer "{CUserName}"!
-
-<html>
-<body>
-<i>Customer Information</i>
-<br />
-<br />
-<table>
-  <tr>
-    <td>Company:</td>
-    <td><b>{CompanyName}</b></td>
-  </tr>
-  <tr>
-    <td>Contact:</td>
-    <td>{ContactName}, {ContactTitle}</td>
-  </tr>
-  <tr>
-    <td valign="top">Address:</td>
-    <td>
-        {Address}<br />
-        {City}, {Region} {PostalCode}
-    </td>
-  </tr>
-  <tr>
-    <td>Country:</td><td>{Country}</td>
-  </tr>
-  <tr>
-    <td>Phone:</td><td>{Phone}</td>
-  </tr>
-  <tr>
-  <td>Fax:</td><td>{Fax}</td>
-  </tr>
-  </table>
-<br />
-<br />
-Northwind,
-Administrator
-</body>
-</html>]]></rule>
   </businessRules>
 </dataController>

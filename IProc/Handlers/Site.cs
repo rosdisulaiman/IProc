@@ -57,7 +57,7 @@ namespace IProc.Handlers
         {
             get
             {
-                return "CARA";
+                return "&copy; 2022 IProc. ^Copyright^All rights reserved.^Copyright^";
             }
         }
 

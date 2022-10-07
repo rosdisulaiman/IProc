@@ -93,7 +93,6 @@ namespace IProc.Rules
                 if (url.Contains("/_invoke/getidentity"))
                     UpdateFieldValue("DisplayRememberMe", false);
             }
-            UpdateFieldValue("RememberMe", true);
             if (OAuthProviders.Count > 0)
                 UpdateFieldValue("OAuthEnabled", true);
         }
